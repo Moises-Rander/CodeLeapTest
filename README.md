@@ -1,7 +1,7 @@
 # CodeLeap Backend Application
 
 This is a backend API project built with Django and Django REST Framework (DRF). It provides authentication for users and allows them to manage posts in a CRUD (Create, Read, Update, Delete) system. The application is hosted on AWS and uses PostgreSQL as the database.
-Link to the working version of the project: http://52.71.206.213/posts/
+Link to the working version of the project: http://52.71.206.213/api/v1/posts/ or http://52.71.206.213/api/v1/posts/1
 
 ## Features
 
