@@ -4,7 +4,6 @@ from users.models import User
 from users.serializers import UserModelSerializer
 
 
-
 class PostModelSerializer(serializers.ModelSerializer):
     user = serializers.PrimaryKeyRelatedField(queryset=User.objects.all())
     user_get = UserModelSerializer(source='user', read_only=True)
