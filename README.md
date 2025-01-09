@@ -1,11 +1,10 @@
-# CodeLeap Backend Application
+# CodeLeap Backend Application Test
 
 This is a backend API project built with Django and Django REST Framework (DRF). It provides authentication for users and allows them to manage posts in a CRUD (Create, Read, Update, Delete) system. The application is hosted on AWS and uses PostgreSQL as the database.
 Link to the working version of the project: http://52.71.206.213/api/v1/posts/ or http://52.71.206.213/api/v1/posts/1
 
 ## Features
 
-- **User Authentication**: The system includes a user model to manage who can access the API.
 - **Post Management**: Fully functional CRUD operations for posts, including creating, reading, updating, and deleting posts. Each post has a title, content, creation date, and is associated with the user who created it.
   
 ## Technologies Used
@@ -15,11 +14,11 @@ Link to the working version of the project: http://52.71.206.213/api/v1/posts/ o
 - **PostgreSQL**: Relational database used for data storage.
 - **AWS EC2**: For hosting the application with an Elastic IP.
 
-## Prerequisites
+## Pre-requisites
 
 To run the project locally, you will need:
 
-- Python 3.8 or higher
+- Python
 - PostgreSQL
 - Pip (Python package manager)
 - Git
@@ -33,7 +32,7 @@ Follow these steps to set up the project locally.
 
 ```bash
 git clone https://github.com/your-username/codeleap-backend.git
-cd codeleap-backend
+cd CodeLeapTest
 ```
 ### 2. Create a virtual environment
 
@@ -49,12 +48,11 @@ pip install -r requirements.txt
 ```
 
 ### 4. Set up the database
-Ensure PostgreSQL is installed and running. Create a database for the project and configure your environment variables using ```python-dotenv```.
-Example ```.env``` file:
-
-```env
-DATABASE_PASSWORD=your_secret_key
-```
+Ensure PostgreSQL is installed and running. Create a database for the project and configure your environment variables using ```python-dotenv```.  
+* Example ```.env``` file:
+    ```env
+    DATABASE_PASSWORD=your_secret_key
+    ```
 
 ### 5. Apply database migrations
 
@@ -186,15 +184,3 @@ Follow these steps for deployment:
    ![Captura de Tela 2025-01-08 às 04 40 33](https://github.com/user-attachments/assets/442a6ede-de26-48f0-9ff7-7e89b76858e7)
 3. /posts/int:pk/ page
    ![Captura de Tela 2025-01-08 às 04 41 01](https://github.com/user-attachments/assets/36e923ef-5b0b-49cf-a38f-bb95c11e4b00)
-
-
-   
-
-
-
-
-
-
-
-
-
