@@ -86,18 +86,22 @@ Request body example:
 
 ```json
 {
-  "title": "New Post",
-  "content": "Content of the new post"
+  "user": 1,
+  "title": "Jhon 14 6",
+  "content": "I am the way, and the truth, and the life. No one comes to the Father except through me."
 }
 ```
 Response:
 ```json
 {
-  "id": 2,
-  "title": "New Post",
-  "content": "Content of the new post",
-  "created_at": "2025-01-08T12:00:00Z",
-  "user": 1
+    "id": 3,
+    "user": {
+        "id": 1,
+        "username": "moises"
+    },
+    "created_datetime": "2025-01-08T19:01:19.662926Z",
+    "title": "Jhon 14 6",
+    "content": "I am the way, and the truth, and the life. No one comes to the Father except through me."
 }
 ```
 ### 2. List Posts
@@ -109,10 +113,23 @@ Response example:
 [
   {
     "id": 1,
-    "title": "My First Post",
-    "content": "Content of the post",
-    "created_at": "2025-01-01T12:00:00Z",
-    "user": 1
+    "user": {
+        "id": 1,
+        "username": "moises"
+    },
+    "created_datetime": "2025-01-08T07:09:43.411860Z",
+    "title": "Primeiro post",
+    "content": "Esse é o primeiro post feito nessa API"
+  },
+  {
+    "id": 2,
+    "user": {
+        "id": 1,
+        "username": "moises"
+    },
+    "created_datetime": "2025-01-08T18:58:45.462034Z",
+    "title": "Second Post",
+    "content": "Thats the second post made here"
   }
 ]
 ```
@@ -125,10 +142,13 @@ Response example:
 ```json
 {
   "id": 1,
-  "title": "My First Post",
-  "content": "Content of the post",
-  "created_at": "2025-01-01T12:00:00Z",
-  "user": 1
+  "user": {
+      "id": 1,
+      "username": "moises"
+  },
+  "created_datetime": "2025-01-08T07:09:43.411860Z",
+  "title": "Primeiro post",
+  "content": "Esse é o primeiro post feito nessa API"
 }
 ```
 
@@ -140,8 +160,9 @@ Response example:
 Response body example:
 ```json
 {
-  "title": "Updated Post",
-  "content": "Updated content"
+  "user": 1,
+  "title": "Jhon 14 6",
+  "content": "I am the way, and the truth, and the life. No one comes to the Father except through me."
 }
 ```
 
@@ -152,21 +173,12 @@ Response body example:
 Response body example:
 ```json
 {
-  "title": "Partially Updated Post"
+  "title": "Jhon 14 6"
 }
 ```
 ### 6. Delete post
 
 • DELETE /posts/int:pk/: Delete a post.
-
-## Environmental Variables
-
-The project uses environment variables for sensitive information and configuration. You can configure the following in your ```.env``` file:
-
-• ```DATABASE_URL```: The URL for the PostgreSQL database (e.g., ```postgres://username:password@localhost:5432/database_name)```.
-• ```SECRET_KEY```: Django's secret key.
-• ```DEBUG```: Set to ```True``` for development and ```False``` for production.
-• ```ALLOWED_HOSTS```: Hosts that are allowed to connect to the Django application (e.g., ```localhost,127.0.0.1```).
 
 ## Deployment on AWS
 The application is hosted on AWS using EC2 with an Elastic IP.
